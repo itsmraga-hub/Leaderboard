@@ -1,0 +1,68 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 62.5%;
+  height: 100vh;
+  width: 100%;
+}
+
+.header {
+  padding: 2em;
+  font-size: 2em;
+}
+
+.header .main-header {
+  text-align: left;
+}
+
+.main-container {
+  width: 100%;
+  font-size: 2em;
+  display: flex;
+  gap: 2em;
+  justify-content: center;
+}
+
+.main-flex {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.main-flex .container {
+  display: flex;
+  gap: 1em;
+  align-items: center;
+}
+
+.main-flex .scores-container {
+  list-style: none;
+  border: 1px solid black;
+}
+
+.main-flex .scores-container li {
+  border-bottom: 1px solid black;
+  padding: 0 0.5em;
+}
+
+.main-flex .scores-container li:nth-of-type(even) {
+  background-color: gray;
+}
+
+.score-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+
+.score-form .input-cls {
+  padding: 0.5em;
+}
+
+.score-form .btn {
+  width: max-content;
+  padding: 0.5em;
+}
