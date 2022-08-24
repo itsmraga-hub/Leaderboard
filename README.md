@@ -26,13 +26,13 @@ An app that consumes the Leaderboard API using JavaScript async and await. It pr
 
 - ### Desktop Version
 
-  ![screenshot](./src/assets/)
+  ![screenshot](./src/assets/leaderboard-desktop.png)
 
 - ### Interactive List
 
   - Easily edit and delete tasks on a single click
 
-  ![screenshot](./src/assets/)
+  ![screenshot](./src/assets/leaderboard-mobile.png)
 
 ### Prerequisites
 
