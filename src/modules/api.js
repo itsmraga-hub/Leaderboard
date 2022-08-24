@@ -1,6 +1,4 @@
-// Game ID = 0RdmO6P1iNabIgZlUyF4
-
-import displayScores from "./displayScores";
+import displayScores from './displayScores.js';
 
 const getResponse = async () => {
   const response = await fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/', {
@@ -16,13 +14,12 @@ const getResponse = async () => {
       },
     ),
   });
-  console.log(response);
   const data = await response.json();
   console.log(data);
 };
 
 const addScore = async (obj) => {
-  const response = await fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/0RdmO6P1iNabIgZlUyF4/scores/', {
+  const response = await fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/nnOBr2eapsi2r4jUDCrl/scores/', {
     method: 'POST',
     headers: {
       Accept: 'application/json',
@@ -38,11 +35,10 @@ const addScore = async (obj) => {
 const container = document.querySelector('.scores-container');
 
 const getScores = async () => {
-  const response = await fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/0RdmO6P1iNabIgZlUyF4/scores/', {
+  const response = await fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/nnOBr2eapsi2r4jUDCrl/scores/', {
     method: 'GET',
   });
   const data = await response.json();
-  console.log(data.result);
   displayScores(data.result, container);
 };
 
