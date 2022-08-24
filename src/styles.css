@@ -101,7 +101,7 @@ body {
   border-radius: 4px;
 }
 
-/* .score-form .btn {
+.score-form .btn {
   width: max-content;
   padding: 0.75em;
   letter-spacing: 1px;
@@ -110,7 +110,7 @@ body {
   cursor: pointer;
   background-color: lightgreen;
   border-radius: 0.8em;
-} */
+}
 
 
 @media (min-width: 768px) {
