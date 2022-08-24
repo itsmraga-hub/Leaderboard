@@ -14,8 +14,8 @@ const getResponse = async () => {
       },
     ),
   });
+  // eslint-disable-next-line no-unused-vars
   const data = await response.json();
-  console.log(data);
 };
 
 const addScore = async (obj) => {
@@ -28,8 +28,8 @@ const addScore = async (obj) => {
     },
     body: JSON.stringify(obj),
   });
+  // eslint-disable-next-line no-unused-vars
   const data = await response.json();
-  console.log(data);
 };
 
 const container = document.querySelector('.scores-container');
