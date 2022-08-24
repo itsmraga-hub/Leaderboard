@@ -1,5 +1,4 @@
 import { addScore } from './api.js';
-// import displayScores from './displayScores.js';
 
 const form = document.querySelector('.score-form');
 
