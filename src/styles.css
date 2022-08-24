@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Roboto:wght@400;500;700&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -5,28 +7,52 @@
 
 body {
   font-size: 62.5%;
-  height: 100vh;
   width: 100%;
+  overflow-x: hidden;
+  font-family: 'Roboto', sans-serif;
+  background-color: rgba(128, 128, 128, 0.034);
 }
 
 .header {
-  padding: 2em;
+  padding: 1em 0;
   font-size: 2em;
 }
 
 .header .main-header {
-  text-align: left;
+  text-align: center;
 }
 
 .main-container {
   width: 100%;
   font-size: 2em;
   display: flex;
+  flex-direction: column;
   gap: 2em;
   justify-content: center;
+  align-items: center;
+  padding-bottom: 1em;
+}
+
+.scores-title {
+  font-size: 1.25em;
+}
+
+.refresh {
+  text-decoration: none;
+  display: flex;
+  gap: 2px;
+  cursor: pointer;
+  color: rgb(27, 82, 233);
+}
+
+.refresh svg {
+  width: 0.8em;
+  fill: rgb(27, 82, 233);
 }
 
 .main-flex {
+  width: 80%;
+  margin: auto;
   display: flex;
   flex-direction: column;
   gap: 1em;
@@ -41,28 +67,69 @@ body {
 .main-flex .scores-container {
   list-style: none;
   border: 1px solid black;
+  max-height: 400px;
+  overflow-y: scroll;
 }
 
 .main-flex .scores-container li {
   border-bottom: 1px solid black;
-  padding: 0 0.5em;
+  padding: 0.25em 0.5em;
+}
+
+.main-flex .scores-container li:nth-of-type(odd) {
+  background-color: rgba(128, 128, 128, 0.055);
 }
 
 .main-flex .scores-container li:nth-of-type(even) {
-  background-color: gray;
+  background-color: rgba(128, 128, 128, 0.185);
+}
+
+.main-flex .form-title {
+  text-align: center;
 }
 
 .score-form {
+  width: 80%;
+  margin: auto;
   display: flex;
   flex-direction: column;
   gap: 0.5em;
 }
 
 .score-form .input-cls {
-  padding: 0.5em;
+  padding: 0.75em;
+  border-radius: 4px;
 }
 
 .score-form .btn {
   width: max-content;
-  padding: 0.5em;
+  padding: 0.75em;
+  letter-spacing: 1px;
+  font-weight: bolder;
+  margin: auto;
+  cursor: pointer;
+  background-color: lightgreen;
+  border-radius: 0.8em;
+}
+
+@media (min-width: 768px) {
+  .main-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2em;
+    padding: 2em 3em;
+  }
+
+  .main-flex {
+    width: 100%;
+  }
+
+  .main-flex .scores-container {
+    max-height: 600px;
+  }
+
+  .main-flex .score-form {
+    width: 50%;
+  }
 }
